@@ -1,0 +1,19 @@
+<img src="../assets/homepage/banda singh bahadur.jpg" style="width: 100%; height: 500px;  ">
+</div>
+<div class="item ">
+
+<img src="../assets/homepage/banda singh bahadur.jpg" style="width: 100%; height: 500px; ">
+
+</div>
+<div class="item ">
+<img src="../assets/homepage/banda singh bahadur.jpg" style="width: 100%; height: 500px; ">
+</div>
+<div class="item ">
+<img src="../assets/homepage/banda singh bahadur.jpg" style="width: 100%; height: 500px; ">
+</div>
+<div class="item ">
+<img src="../assets/homepage/banda singh bahadur.jpg" style="width: 100%; height: 500px; ">
+</div>
+<div class="item ">
+<img src="../assets/homepage/banda singh bahadur.jpg" style="width: 100%; height: 500px; ">
+</div>
