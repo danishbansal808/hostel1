@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const id = require('crypto-random-string');
 const date = require('date-and-time');
-const nodemailer = require('nodemailer');
 const connection = require('./connection');
+const transporter = require('./email');
 var app = express();
 
 var urlencodedParser = bodyParser.urlencoded({
@@ -15,15 +15,6 @@ var urlencodedParser = bodyParser.urlencoded({
   }
   console.log('connect!!!');
 });
-
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'bandabhadurhostel@gmail.com',
-    pass: 'D@nish123'
-  }
-});
-
 let now = new Date();
 date.format(now, 'YYYY/MM/DD HH:mm:ss');
 app.set('view engine', 'ejs');

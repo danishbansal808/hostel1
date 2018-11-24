@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const fileupload = require('express-fileupload');
 const connection = require('./connection');
+const loginadmin = require('./loginadmin');
 var app = express();
 app.use(fileupload());
 app.set('view engine', 'ejs');

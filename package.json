@@ -4,7 +4,7 @@
   "description": "hostel",
   "main": "app.js",
   "scripts": {
-    "start":"node app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -22,8 +22,11 @@
     "express": "^4.16.4",
     "express-fileupload": "^1.0.0",
     "express-session": "^1.15.6",
+    "express-sessions": "^1.0.6",
+    "express-validator": "^5.3.0",
     "mongoose": "^5.3.4",
     "mysql": "^2.16.0",
-    "nodemailer": "^4.6.8"
+    "nodemailer": "^4.6.8",
+    "password-validator": "^4.1.1"
   }
 }

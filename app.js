@@ -4,6 +4,8 @@ const contact = require('./routes/contact');
 const complaints = require('./routes/compliants');
 const news = require('./routes/news');
 const admin = require('./routes/admin');
+const loginadmin = require('./routes/loginadmin');
+const signup = require('./routes/signup');
 var app = express();
 app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'));
@@ -20,5 +22,11 @@ app.get('/managecomplaints', admin)
 app.get('/managecontacts',admin)
 app.get('/managenews',admin)
 app.post('/upload',admin)
-app.listen(3000);
+app.get('/loginadmin',loginadmin)
+app.post('/loginadmin',loginadmin)
+app.get('/adminpage',loginadmin)
+app.get('/count',loginadmin)
+app.get('/signup',signup)
+app.post('/signup',signup)
+app.listen(1999);
 console.log(Date.now());
