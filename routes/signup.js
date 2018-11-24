@@ -74,6 +74,7 @@ app.post('/signup',urlencodedParser,function(req,res){
       })
 }
 else{
-  res.send("Password Not right");
+  var checker="Password Not right";
+  res.render('signup',checker)
 }});
 module.exports= app;

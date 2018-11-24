@@ -28,5 +28,12 @@
     "mysql": "^2.16.0",
     "nodemailer": "^4.6.8",
     "password-validator": "^4.1.1"
+  },
+  "engines":{
+    "node":"11.0.0"
+  },
+  "repository":{
+    "type":"git"
+    "url":"https://github.com/danishbansal808/hostel1.git"
   }
 }
