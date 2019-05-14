@@ -9,7 +9,11 @@
     border: 1px solid black;
 }
 </style>
-
+<script>
+        function enableButton2() {
+            document.getElementById("completebtn").disabled = false;
+        }
+    </script>
 </head>
 
 <body>
@@ -21,6 +25,7 @@
       <th>Complaint</th>
       <th>Description</th>
       <th>Recieved</th>
+      <th>Completed</th>
     </tr>
     <%datas.forEach(function(data){%>
     <tr>
@@ -40,7 +45,10 @@
         <%=data.Description%>
       </td>
       <td>
-        <button type="button" id="recivebtn" name="btnn" method="post" action="./../assets/managecomplaints/read.js">Mark <s></s>Recieve</button>
+        <button type="button" id="recivebtn[]" name="btnn" method="post" action="./../assets/managecomplaints/read.js" onclick="enableButton2()">Mark Recieve</button>
+      </td>
+      <td>
+        <button type="button" id="completebtn" name="btnn1" method="post" action="./../assets/managecomplaints/read.js" disabled>Mark Completed</button>
       </td>
     </tr>
     <%})%>

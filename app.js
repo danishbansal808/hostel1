@@ -7,6 +7,7 @@ const admin = require('./routes/admin');
 const loginadmin = require('./routes/loginadmin');
 const signup = require('./routes/signup');
 var app = express();
+const port=process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'));
 app.get('/', home)
@@ -28,5 +29,6 @@ app.get('/adminpage',loginadmin)
 app.get('/count',loginadmin)
 app.get('/signup',signup)
 app.post('/signup',signup)
-app.listen(1999);
+app.listen(port);
+console.log(port);
 console.log(Date.now());

@@ -26,7 +26,7 @@ schema
 .has().lowercase()
 .has().digits()
 .has().not().spaces()
-.is().not().oneOf(['Passw0rd', 'Password123']);
+.is().not().oneOf(['Passw0rd', 'Password123','QWERTYUIOP','qwertyuiop']);
 
 app.get('/signup', function(req,res) {
   res.render('signup');
@@ -36,7 +36,7 @@ app.post('/signup',urlencodedParser,function(req,res){
     password = req.body.password,
     repeat_password=req.body.password_repeat,
     uid = id(8);
-    if(schema.validate(password)){
+    if(schema.validate(password)&&password===repeat_password){
     var stmnt = `INSERT INTO signup(Email, Password, Uniqueno) VALUES (?,?,?)`;
     var alldata = [email, password, uid];
     var mailOptions = {
@@ -75,6 +75,6 @@ app.post('/signup',urlencodedParser,function(req,res){
 }
 else{
   var checker="Password Not right";
-  res.render('signup',checker)
+  res.send(checker)
 }});
 module.exports= app;
